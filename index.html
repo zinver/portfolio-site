@@ -1,146 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fardin Ahmed — Developer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fardin Ahmed</title>
+<meta name="description" content="Fardin Ahmed, developer and engineer. Web apps, Web3 UI/UX and cybersecurity.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-layer" id="bg-layer"></div>
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
 
-<header>
+<header class="top">
   <div class="wrap">
-    <div class="prompt">fardin<span>@</span>dev<span>:~$</span></div>
-    <nav>
-      <a href="#about">about</a>
-      <a href="#stack">stack</a>
-      <a href="#work">work</a>
-      <a href="#contact">contact</a>
+    <a class="mark" href="#top">Fardin Ahmed</a>
+    <nav aria-label="Sections">
+      <a href="#design">Design</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="hero wrap">
-  <div class="hero-eyebrow mono">whoami</div>
-  <h1 id="typed-name">Fardin Ahmed<span class="cursor">&nbsp;</span></h1>
-  <p class="hero-sub">A developer studying IT, building full products end to end — and increasingly pulled toward Web3, where I want to spend more of my time building.</p>
-  <div class="hero-stats">
-    <div>
-      <div class="stat-num">High School</div>
-      <div class="stat-label">graduated</div>
+<main>
+  <section class="hero" id="top" data-bg="#07060d">
+    <div class="wrap">
+      <p class="eyebrow rv">Developer / Engineer</p>
+      <h1 class="rv">Fardin<br><span class="outline">Ahmed</span></h1>
+      <p class="lede rv">I build web apps and design the interfaces they live in. Currently studying a <b>Diploma in IT</b>, shipping projects on the side, and moving steadily toward <b>Web3</b>.</p>
+      <ul class="chips rv" aria-label="Focus areas">
+        <li>Next.js</li><li>Supabase</li><li>Web3 UI/UX</li><li>Cybersecurity</li>
+      </ul>
+      <div class="scrollcue rv"><i></i>Scroll</div>
     </div>
-    <div>
-      <div class="stat-num">Diploma in IT</div>
-      <div class="stat-label">currently studying</div>
-    </div>
-    <div>
-      <div class="stat-num">1</div>
-      <div class="stat-label">app shipping</div>
-    </div>
-  </div>
-  <div class="scroll-hint">scroll</div>
-</section>
+  </section>
 
-<section class="statement wrap reveal">
-  <div class="section-tag">Web3 UI/UX Design</div>
-  <h2>Crafting beautiful, high-contrast interfaces.</h2>
-  <p>Fully responsive design work loaded with immersive layouts, deliberate typography, and interactive motion — built for a Web3 sensibility, not a template one.</p>
-</section>
+  <section id="design" data-bg="#0d0724">
+    <div class="wrap">
+      <p class="eyebrow rv">Web3 UI/UX Design</p>
+      <h2 class="rv">Interfaces with weight.</h2>
+      <p class="sub rv">I craft high-contrast, fully responsive interfaces with immersive layouts, typography, and interactive motion, built so a dark screen still reads clearly on a phone.</p>
+      <div class="principles">
+        <article class="rv"><h3>High contrast</h3><p>Strong type on deep backgrounds, with one accent colour used where the eye should land.</p></article>
+        <article class="rv"><h3>Fully responsive</h3><p>Layouts that rearrange for phones first instead of shrinking a desktop page.</p></article>
+        <article class="rv"><h3>Interactive motion</h3><p>Scroll-driven shifts and small hover responses that guide attention without getting in the way.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section id="about" class="wrap">
-  <div class="section-tag">01 — about</div>
-  <h2 class="reveal">Studying IT, building toward Web3.</h2>
-  <div class="about-body reveal">
-    <p>I graduated high school and I'm currently studying a <strong>Diploma in IT</strong> in college. Alongside coursework, I build full products end to end — frontend, backend, and the infrastructure that holds it together.</p>
-    <p>I'm increasingly focused on <strong>Web3</strong> and <strong>cybersecurity</strong>, putting more of my time into building and learning there — this site is one of a few things I'm shipping as that shift happens.</p>
-  </div>
-</section>
+  <section id="work" data-bg="#07131a">
+    <div class="wrap">
+      <p class="eyebrow rv">Selected work</p>
+      <h2 class="rv">Projects</h2>
+      <p class="sub rv">Two live builds so far, with more on the way as I spend more time in Web3.</p>
+      <div class="projects">
+        <article class="project rv">
+          <div>
+            <p class="tag">Social app · Live</p>
+            <h3>Qui</h3>
+            <p>A mini social media app made for introverts. It keeps the feed small and calm, with sign-in through Google.</p>
+            <div class="btns"><a class="btn solid" href="https://quiapp-zinver.vercel.app" target="_blank" rel="noopener">Open Qui</a></div>
+          </div>
+          <div class="meta">
+            <dl>
+              <dt>Front end</dt><dd>Next.js (App Router), React, Tailwind CSS</dd>
+              <dt>Back end</dt><dd>Supabase: PostgreSQL and Auth with Google OAuth</dd>
+              <dt>Hosting</dt><dd>Vercel</dd>
+            </dl>
+          </div>
+        </article>
+        <article class="project rv">
+          <div>
+            <p class="tag">Travel map · Live · November 2026</p>
+            <h3>World Explorer</h3>
+            <p>A travel map where you colour in the places you have visited, plan where to go next, and download a picture of your travels.</p>
+            <div class="btns"><a class="btn solid" href="https://world-explorer-six-self.vercel.app/" target="_blank" rel="noopener">Open World Explorer</a><a class="btn" href="https://github.com/zinver" target="_blank" rel="noopener">GitHub</a></div>
+          </div>
+          <div class="meta">
+            <dl>
+              <dt>Features</dt><dd>Visited places, trip planning, image export</dd>
+              <dt>Sharing</dt><dd>Personal shareable profile pages</dd>
+              <dt>Hosting</dt><dd>Vercel</dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="stack" class="wrap">
-  <div class="section-tag">02 — stack</div>
-  <h2 class="reveal">The layers I build with.</h2>
-  <div class="stack-diagram reveal">
-    <div class="stack-row">
-      <div class="stack-layer">FRONTEND</div>
-      <div class="stack-tech">Next.js (App Router) · React</div>
-      <div class="stack-lang">TypeScript / JavaScript, JSX / TSX</div>
+  <section id="stack" data-bg="#150a1c">
+    <div class="wrap">
+      <p class="eyebrow rv">Toolbox</p>
+      <h2 class="rv">What I work with</h2>
+      <div class="stack">
+        <div class="rv"><h3>Front end</h3><p>Next.js, React, TypeScript / JavaScript, Tailwind CSS</p></div>
+        <div class="rv"><h3>Back end</h3><p>Supabase, PostgreSQL, Google OAuth</p></div>
+        <div class="rv"><h3>Shipping</h3><p>Vercel, GitHub</p></div>
+        <div class="rv"><h3>Heading toward</h3><p>Web3 products and cybersecurity</p></div>
+      </div>
     </div>
-    <div class="stack-row">
-      <div class="stack-layer">STYLING</div>
-      <div class="stack-tech">Tailwind CSS</div>
-      <div class="stack-lang">Utility-first classes</div>
-    </div>
-    <div class="stack-row">
-      <div class="stack-layer">BACKEND</div>
-      <div class="stack-tech">Supabase (PostgreSQL)</div>
-      <div class="stack-lang">SQL</div>
-    </div>
-    <div class="stack-row">
-      <div class="stack-layer">AUTH</div>
-      <div class="stack-tech">Supabase Auth · Google OAuth</div>
-      <div class="stack-lang">JavaScript</div>
-    </div>
-    <div class="stack-row">
-      <div class="stack-layer">HOSTING</div>
-      <div class="stack-tech">Vercel</div>
-      <div class="stack-lang">—</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="work" class="wrap">
-  <div class="section-tag">03 — work</div>
-  <h2 class="reveal">What I'm building right now.</h2>
-  <div class="project-card reveal">
-    <span class="badge">in development</span>
-    <h3>Qui</h3>
-    <p>A minimalist, metrics-free web app for posting thoughts through a public profile link — inspired by NGL, but stripped of the gamification. No view counts, no engagement metrics, no anonymous messaging loop. Visitors read; you post. Built solo, from schema to ship.</p>
-    <div class="project-tags">
-      <span>Next.js</span>
-      <span>Supabase</span>
-      <span>Google OAuth</span>
-      <span>Vercel</span>
+  <section id="contact" data-bg="#07060d">
+    <div class="wrap">
+      <p class="eyebrow rv">Contact</p>
+      <h2 class="rv">Let's build something.</h2>
+      <p class="sub rv">Best way to reach me is email. I also read messages on X and Discord.</p>
+      <ul class="contact-list">
+        <li class="rv"><span class="k">Email</span><span class="v" id="email">fardinahmedxd@gmail.com</span><button class="btn" id="copy" type="button">Copy</button></li>
+        <li class="rv"><span class="k">GitHub</span><a class="v" href="https://github.com/zinver" target="_blank" rel="noopener">github.com/zinver</a></li>
+        <li class="rv"><span class="k">X</span><a class="v" href="https://x.com/fardin123z" target="_blank" rel="noopener">@fardin123z</a></li>
+        <li class="rv"><span class="k">Discord</span><span class="v">fardin_007</span></li>
+      </ul>
     </div>
-    <a href="https://quiapp-zinver.vercel.app" target="_blank" rel="noopener" class="project-link">
-      visit quiapp-zinver.vercel.app →
-    </a>
-  </div>
-  <p style="margin-top:24px;color:var(--muted);font-size:14px;">More Web3 projects are on the way as I lean further into that space.</p>
-</section>
+  </section>
+</main>
 
-<section id="contact" class="wrap">
-  <div class="section-tag">04 — contact</div>
-  <h2 class="reveal">Let's talk.</h2>
-  <div class="contact-list reveal">
-    <div class="contact-row">
-      <span class="contact-key">email</span>
-      <a class="contact-val" href="mailto:fardinahmedxd@gmail.com">fardinahmedxd@gmail.com</a>
-    </div>
-    <div class="contact-row">
-      <span class="contact-key">github</span>
-      <a class="contact-val" href="https://github.com/zinver" target="_blank" rel="noopener">github.com/zinver</a>
-    </div>
-    <div class="contact-row">
-      <span class="contact-key">x</span>
-      <a class="contact-val" href="https://x.com/fardin123z" target="_blank" rel="noopener">@fardin123z</a>
-    </div>
-    <div class="contact-row">
-      <span class="contact-key">discord</span>
-      <span class="contact-val">fardin_007</span>
-    </div>
-  </div>
-</section>
-
-<footer class="wrap">
-  <span>© 2026 Fardin Ahmed</span>
-  <span>built with Next.js in spirit, plain HTML in practice</span>
+<footer>
+  <div class="wrap">© 2026 Fardin Ahmed</div>
 </footer>
 
 <script src="script.js"></script>
